@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Comentarios sobre marca de lujo</title>
+</head>
+<body>
+    <h1>Bienvenido a los comentarios sobre marcas de lujo</h1>
+    <h2>Proporciona tus comentarios</h2>
+    <label for="name">Nombre:</label><br>
+    <input type="text" id="name" placeholder="Tu nombre" required><br>
+    
+    <label for="age">Edad:</label><br>
+    <input type="number" id="age" placeholder="Tu edad" required><br>
+    
+    <label for="email">Correo electrónico:</label><br>
+    <input type="email" id="email" placeholder="Tu correo electrónico" required><br>
+    
+    <label for="job">Trabajo:</label><br>
+    <input type="text" id="job" placeholder="Tu trabajo" required><br>
+    
+    <label for="designation">Designación:</label><br>
+    <input type="text" id="designation" placeholder="Tu designación" required><br>
+    
+    <label for="productType">Tipo de producto:</label><br>
+    <select id="productType" required>
+        <option value="Perfume">Perfume</option>
+        <option value="Crema">Crema</option>
+        <option value="Aceite">Aceite</option>
+    </select><br>
+    
+    <label for="feedbackText">Comentarios:</label><br>
+    <textarea id="feedbackText" rows="5" cols="30" placeholder="Ingresa tus comentarios aquí" required></textarea><br>
+    
+    <button id="submitBtn">Enviar comentarios</button>
+    <hr>
+    
+    <div id="userInfo" style="display: none;">
+        <h2>Información del Usuario</h2>
+        <p>Nombre: <span id="userName"></span></p>
+        <p>Edad: <span id="userAge"></span></p>
+        <p>Correo electrónico: <span id="userEmail"></span></p>
+        <p>Trabajo: <span id="userJob"></span></p>
+        <p>Designación: <span id="userDesignation"></span></p>
+        <p>Comentarios para <span id="userProductChoice"></span>: <span id="userFeedback"></span></p>
+    </div>
+    
+    <script src="product_survey.js"></script>
+</body>
+</html>
