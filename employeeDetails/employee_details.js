@@ -1,9 +1,9 @@
 const employees = [
-    { id: 1, name: 'John Doe', age: 30, department: 'IT', salary: 50000 },
-    { id: 2, name: 'Alice Smith', age: 28, department: 'HR', salary: 45000 },
-    { id: 3, name: 'Bob Johnson', age: 35, department: 'Finance', salary: 60000 },
-    { id: 4, name: 'Jhonathan Linares', age: 38, department: 'Desarrollo', salary: 500000 },
-    { id: 5, name: 'Camilo Cardona', age: 25, department: 'Marketing', salary: 45000 },
+    { id: 1, name: 'John Doe', age: 30, department: 'IT', salary: 50000, specialization: 'Java'},
+    { id: 2, name: 'Alice Smith', age: 28, department: 'HR', salary: 45000, specialization: 'Html' },
+    { id: 3, name: 'Bob Johnson', age: 35, department: 'Finance', salary: 60000, specialization: 'Python' },
+    { id: 4, name: 'Jhonathan Linares', age: 38, department: 'Desarrollo', salary: 500000, specialization: 'JavaScript' },
+    { id: 5, name: 'Camilo Cardona', age: 25, department: 'Marketing', salary: 45000, specialization: 'C++' },
   ];
 
   const totalemployees = employees.map((employee, index)=> `<p>${employee.id}: ${employee.name}: ${employee.age}: ${employee.department} - $${employee.salary}</p>`).join('');
@@ -34,4 +34,10 @@ function findEmployeeById(employeeId) {
     else {
         document.getElementById('employeesDetails').innerHTML = 'No se ha encontrado ningun empleadocon este ID';
     }
+}
+
+function findSpecialization() {
+    const javaEmployees = employees.filter(employee => employee.specialization === 'JavaScript');
+    const javaEmployeesDisplay = javaEmployees.map ((employee, index)=> `<p>${employee.id}: ${employee.name}: ${employee.department} - ${employee.specialization}`);
+    document.getElementById('employeesDetails').innerHTML = javaEmployeesDisplay;
 }
