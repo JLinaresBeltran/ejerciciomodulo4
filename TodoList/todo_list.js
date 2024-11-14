@@ -2,6 +2,7 @@ const taskInput = document.getElementById("taskInput");
 const addTaskBtn = document.getElementById("addTaskBtn");
 const taskList = document.getElementById("taskList");
 const clearCompletedBtn = document.getElementById("clearCompletedBtn");
+const limpiarTodas = document.getElementById('eliminar');
 
 let tasks = [];
 
@@ -35,3 +36,12 @@ addTaskBtn.addEventListener("click", addTask);
 clearCompletedBtn.addEventListener("click", clearCompletedTasks);
 
 displayTasks();
+
+function limpiarTodo() {
+    tasks = []; // Vacía el arreglo de tareas
+     // Borra el contenido de la lista en la interfaz
+    displayTasks(); // Actualiza la lista de tareas en la interfaz
+}
+
+limpiarTodas.addEventListener("click", limpiarTodo);
+
